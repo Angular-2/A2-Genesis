@@ -1,2 +1,16 @@
-# A2-Genesis
-Angular is a framework for building client applications in HTML and either JavaScript or a language like TypeScript that compiles to JavaScript.  The framework consists of several libraries, some of them core and some optional.  You write Angular applications by composing HTML templates with Angularized markup, writing component classes to manage those templates, adding application logic in services, and boxing components and services in modules.  Then you launch the app by bootstrapping the root module. Angular takes over, presenting your application content in a browser and responding to user interactions according to the instructions you've provided.
+<p align="center">
+<a href="http://academy.telerik.com/">
+<img src="https://camo.githubusercontent.com/08ecbe7b67d65cc7c6990787e2836b27b4296f2d/68747470733a2f2f7261772e6769746875622e636f6d2f666c65787472792f54656c6572696b2d41636164656d792f6d61737465722f50726f6772616d6d696e6725323077697468253230432532332f436f6465732f4f746865722f54656c6572696b2e706e67"/>
+</a>
+
+<h1 align="center">Single-page Applications with Angular2 Team "A2 Genesis"</h1>
+
+###:mortar_board:Team Members
+| Name              | Academy Username      	|
+|-------------------|-------------------|
+|                   | :white_check_mark:|
+|Georgi Karaboichev |__prot3ct__	        |
+|Rumen Tsanov |__RumenTsanov__	        |
+|Niya Keranova|__Nayata__       	|	
+
+##<a href="https://github.com/Angular-2/A2-Genesis/blob/master/CourseProject.md">Project Requirements</a>
