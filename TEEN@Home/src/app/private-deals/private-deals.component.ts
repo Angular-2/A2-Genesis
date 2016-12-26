@@ -1,0 +1,1 @@
+//This component will take care of getting and displaying the private deals data.
