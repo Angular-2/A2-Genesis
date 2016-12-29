@@ -4,32 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { AppRoutingModule, routedComponents } from './app-routing.module'
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './Public/navigation/navigation.component';
-import { RegisterComponent } from './Public/register/register.component';
-import { LoginComponent } from './Public/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    RegisterComponent,
-    LoginComponent
+    routedComponents
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: 'register',
-        component: RegisterComponent
-      }
-    ])
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
