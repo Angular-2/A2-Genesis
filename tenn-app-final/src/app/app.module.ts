@@ -7,12 +7,14 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule, routedComponents } from './app-routing.module'
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './Public/navigation/navigation.component';
+import { HowToUseComponent } from './Public/how-to-use/how-to-use.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    routedComponents
+    routedComponents,
+    HowToUseComponent
   ],
   imports: [
     BrowserModule,
