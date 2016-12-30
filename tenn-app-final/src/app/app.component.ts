@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { NavigationComponent } from './public/navigation/navigation.component';
-import { RegisterComponent } from './public/register/register.component';
-import { LoginComponent } from './public/login/login.component';
-import { HowToUseComponent } from './public/how-to-use/how-to-use.component';
-import { AboutUsComponent } from './public/about-us/about-us.component';
-import { ContactsComponent } from './public/contacts/contacts.component';
-import { ParentGuideComponent } from './public/parent-guide/parent-guide.component';
-import { TeenJobsComponent } from './public/teen-jobs/teen-jobs.component';
+import { NavigationComponent } from './components/public/navigation/navigation.component';
+import { RegisterComponent } from './components/public/register/register.component';
+import { LoginComponent } from './components/public/login/login.component';
+import { HowToUseComponent } from './components/public/how-to-use/how-to-use.component';
+import { AboutUsComponent } from './components/public/about-us/about-us.component';
+import { ContactsComponent } from './components/public/contacts/contacts.component';
+import { ParentGuideComponent } from './components/public/parent-guide/parent-guide.component';
+import { TeenJobsComponent } from './components/public/teen-jobs/teen-jobs.component';
 
 
 @Component({
