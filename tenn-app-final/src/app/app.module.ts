@@ -6,12 +6,12 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule, routedComponents } from './app-routing.module'
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './Public/navigation/navigation.component';
-import { HowToUseComponent } from './Public/how-to-use/how-to-use.component';
-import { AboutUsComponent } from './Public/about-us/about-us.component';
-import { TeenJobsComponent } from './Public/teen-jobs/teen-jobs.component';
-import { ParentGuideComponent } from './Public/parent-guide/parent-guide.component';
-import { ContactsComponent } from './Public/contacts/contacts.component';
+import { NavigationComponent } from './components/public/navigation/navigation.component';
+import { HowToUseComponent } from './components/public/how-to-use/how-to-use.component';
+import { AboutUsComponent } from './components/public/about-us/about-us.component';
+import { TeenJobsComponent } from './components/public/teen-jobs/teen-jobs.component';
+import { ParentGuideComponent } from './components/public/parent-guide/parent-guide.component';
+import { ContactsComponent } from './components/public/contacts/contacts.component';
 
 @NgModule({
   declarations: [
