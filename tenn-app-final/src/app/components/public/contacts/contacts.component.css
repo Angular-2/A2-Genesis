@@ -4,4 +4,9 @@ img {
 
 .container {
     margin-top: -15px;
+    margin-bottom: 30px;
+}
+
+#members {
+    margin-top: -10px;
 }
