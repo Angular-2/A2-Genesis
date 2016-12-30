@@ -5,5 +5,9 @@ h2 {
 }
 
 input {
-    width: 1000px;
+    width: 85%;
+}
+
+form {
+    padding-bottom: 20%;
 }
