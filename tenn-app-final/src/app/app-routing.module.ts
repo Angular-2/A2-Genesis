@@ -8,6 +8,8 @@ import { AboutUsComponent } from './components/public/about-us/about-us.componen
 import { ContactsComponent } from './components/public/contacts/contacts.component';
 import { ParentGuideComponent } from './components/public/parent-guide/parent-guide.component';
 import { TeenJobsComponent } from './components/public/teen-jobs/teen-jobs.component';
+import { HomeComponent } from './components/public/home/home.component';
+import { FooterComponent } from './components/public/footer/footer.component';
 
 
 const routes: Routes = [
@@ -15,6 +17,10 @@ const routes: Routes = [
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: 'login',
@@ -53,4 +59,4 @@ const routes: Routes = [
 
 export class AppRoutingModule { }
 
-export const routedComponents = [ RegisterComponent, LoginComponent, HowToUseComponent, AboutUsComponent, ContactsComponent, ParentGuideComponent, TeenJobsComponent ];
+export const routedComponents = [ RegisterComponent, LoginComponent, HowToUseComponent, AboutUsComponent, ContactsComponent, ParentGuideComponent, TeenJobsComponent, HomeComponent, FooterComponent ];

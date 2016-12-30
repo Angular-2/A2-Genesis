@@ -7,6 +7,8 @@ import { AboutUsComponent } from './components/public/about-us/about-us.componen
 import { ContactsComponent } from './components/public/contacts/contacts.component';
 import { ParentGuideComponent } from './components/public/parent-guide/parent-guide.component';
 import { TeenJobsComponent } from './components/public/teen-jobs/teen-jobs.component';
+import { HomeComponent } from './components/public/home/home.component';
+import { FooterComponent } from './components/public/footer/footer.component';
 
 
 @Component({
