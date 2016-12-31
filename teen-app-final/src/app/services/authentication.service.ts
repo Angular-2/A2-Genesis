@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response, RequestOptions } from '@angular/http';
-import {Router} from '@angular/router'
+import { Router } from '@angular/router'
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map'
 
@@ -28,6 +28,7 @@ export class AuthenticationService {
                     
                     alert("You have logged in successfully");
                     this.router.navigateByUrl('/home');
+                    
                     
 
                     return true;
