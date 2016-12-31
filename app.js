@@ -64,7 +64,6 @@ app
 		if (!req.body.username || !req.body.password) {
 			return res.status(400).send("You must send the username and the password");
 		}
-		// Search IS NOT WORKING PROPERLY
 		db['users'].findOne({ username: req.body.username }, function(err, user) {
 			if (!user) {
 				return res.status(401).send("The username or password doesn't match");
@@ -77,8 +76,27 @@ app
 				id_token: createToken(user)
 			});
 		});
-	});
+	})
+	.get('/jobs', function(req, res, next) {
+		db['jobs'].find({}, function(err, jobs) {
+			if (err) {
+				return res.status(400).send('Error in DB');
+			}
 
+			return res.status(200).json(jobs);
+		});
+	})
+	.post('/jobs', function(req, res, next) {
+		let job = req.body;
+
+		db['jobs'].save(job, function(err, user) {
+			if (err) {
+				return res.status(400).send('Error in DB');
+			}
+
+			return res.status(200).json(user);
+		});
+	});
 
 const port = 3000;
 app.listen(port);
