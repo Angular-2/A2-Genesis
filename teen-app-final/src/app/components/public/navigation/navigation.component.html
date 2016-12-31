@@ -17,9 +17,9 @@
                 <li><a routerLink="/contacts">CONTACTS</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a routerLink="/home"><span class="glyphicon glyphicon-logout" (^click)="logout()"></span> Logout</a></li>
-                <li><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                <li><a routerLink="/register"><span class="glyphicon glyphicon-lock"></span> Register</a></li>
+                <li [ngClass]="{ 'hidden': !showHiddenClass }"><a (click)="logout()" routerLink="/home"><span class="glyphicon glyphicon-logout"></span> Logout</a></li>
+                <li [ngClass]="{ 'hidden': showHiddenClass }"><a routerLink="/login"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+                <li [ngClass]="{ 'hidden': showHiddenClass }"><a routerLink="/register"><span class="glyphicon glyphicon-lock"></span> Register</a></li>
             </ul>
         </div>
     </div>

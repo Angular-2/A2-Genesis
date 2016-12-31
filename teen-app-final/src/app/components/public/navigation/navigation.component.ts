@@ -7,6 +7,7 @@ import { AuthenticationService } from './../../../services/authentication.servic
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
+  private showHiddenClass: boolean = true;
 
   constructor(private authService: AuthenticationService) { }
 
@@ -14,7 +15,7 @@ export class NavigationComponent implements OnInit {
   }
 
   logout() {
-    console.log('logout called');
+    this.showHiddenClass = false;
     this.authService.logout();
   }
 }
