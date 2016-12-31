@@ -20,15 +20,17 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'register',
     component: RegisterComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'how-to-use',
