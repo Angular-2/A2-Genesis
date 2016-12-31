@@ -28,8 +28,6 @@ export class AuthenticationService {
                     
                     alert("You have logged in successfully");
                     this.router.navigateByUrl('/home');
-                    
-                    
 
                     return true;
                 } 
