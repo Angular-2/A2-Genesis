@@ -40,6 +40,7 @@ export class AuthenticationService {
 
     logout(): void {
         this.token = null;
+        alert("You have successfully logged out");
         localStorage.removeItem('currentUser');
     }
 
