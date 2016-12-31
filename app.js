@@ -47,7 +47,7 @@ app
 	.post('/users', function (req, res, next) {
 		let user = req.body;
 
-		if (!user.username || !user.passHash) {
+		if (!user.username || !user.password) {
 			res.status(400);
 			res.json({ "error": "Bad data!" });
 		}
