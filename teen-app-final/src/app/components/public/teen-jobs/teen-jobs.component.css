@@ -1,0 +1,43 @@
+.jumbotron {
+    background-image: url('./../../../../resources/classroom_english.png');
+    height: 500px
+}
+
+.right-align {
+    float: right;
+    margin-top: -40px
+}
+
+.important {
+    color: white;
+    background-color: #449D44;
+    padding: 10px
+}
+
+.important-box {
+    border: 2px solid darkslategrey
+}
+
+.helpguide {
+    text-decoration: underline;
+    margin-top: 20px
+}
+
+.link {
+    background-color: #8DB8F2;
+    padding: 10px
+}
+
+.link a {
+    color: white;
+}
+
+.drug-abuse {
+    text-decoration: underline;
+    color: #8DB8F2
+}
+
+.center {
+    margin-right: 100px;
+    margin-top: 20px
+}

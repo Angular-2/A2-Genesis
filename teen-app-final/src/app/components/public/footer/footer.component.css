@@ -1,5 +1,5 @@
 footer {
-    background-color: black;
+    background-color: #222222;
     height: 100
 }
 
@@ -24,4 +24,8 @@ footer {
 span {
     margin-left: 50px;
     margin-right: 50px
+}
+
+.copyright {
+    color: lightgrey
 }
