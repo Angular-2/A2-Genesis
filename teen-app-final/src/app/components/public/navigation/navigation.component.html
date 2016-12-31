@@ -18,15 +18,15 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> PROFILE
+                    <a routerLink="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> PROFILE
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">MY PROFILE</a></li>
+                        <li><a routerLink="#">MY PROFILE</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">EDIT PROFILE</a></li>
-                        <li><a href="#">JOBS VIEW</a></li>
-                        <li><a href="#">GROUP</a></li>
-                        <li><a href="#">TASKS</a></li>
+                        <li><a routerLink="#">EDIT PROFILE</a></li>
+                        <li><a routerLink="#">JOBS VIEW</a></li>
+                        <li><a routerLink="#">GROUP</a></li>
+                        <li><a routerLink="#">TASKS</a></li>
                     </ul>
                 </li>
                 <li [ngClass]="{ 'hidden': !showHiddenClass }"><a (click)="logout()" routerLink="/home"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
