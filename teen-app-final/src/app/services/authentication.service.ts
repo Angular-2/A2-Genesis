@@ -25,8 +25,11 @@ export class AuthenticationService {
                 if (token) {
                     this.token = token;
                     localStorage.setItem('currentUser', JSON.stringify({ username: username, token: token }));
+                    
                     alert("You have logged in successfully");
                     this.router.navigateByUrl('/home');
+                    
+
                     return true;
                 } 
                 else {
@@ -43,7 +46,6 @@ export class AuthenticationService {
 
     isLoggedIn(): Boolean {
         if(localStorage.hasOwnProperty('currentUser')) {
-            console.log("TRUE");
             return true;
         }
         else{
