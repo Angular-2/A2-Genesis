@@ -12,8 +12,8 @@
 }
 
 .important {
-    color: white;
-    background-color: #449D44;
+    color: black;
+    background-color: #FFE086;
     padding: 10px
 }
 
@@ -41,6 +41,10 @@
 }
 
 .center {
+    border: none;
+    background-color: #FFE086;
+    font-weight: bold;
+    color: black;
     margin-right: 100px;
     margin-top: 20px
 }
