@@ -15,6 +15,9 @@ import { ContactsComponent } from './components/public/contacts/contacts.compone
 import { HomeComponent } from './components/public/home/home.component';
 import { FooterComponent } from './components/public/footer/footer.component';
 
+import { UsersService } from './services/users.service';
+import { AuthenticationService } from './services/authentication.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,7 @@ import { FooterComponent } from './components/public/footer/footer.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [UsersService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
