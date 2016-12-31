@@ -10,7 +10,7 @@ import { ParentGuideComponent } from './components/public/parent-guide/parent-gu
 import { TeenJobsComponent } from './components/public/teen-jobs/teen-jobs.component';
 import { HomeComponent } from './components/public/home/home.component';
 import { FooterComponent } from './components/public/footer/footer.component';
-
+import { AuthGuard } from'./services/can.deactivate.guard';
 
 const routes: Routes = [
   {
@@ -28,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
   },
   {
     path: 'how-to-use',
@@ -44,7 +44,8 @@ const routes: Routes = [
   },
   {
     path: 'parent-guide',
-    component: ParentGuideComponent
+    component: ParentGuideComponent,
+
   },
   {
     path: 'teen-jobs',

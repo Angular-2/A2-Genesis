@@ -15,6 +15,7 @@ import { ContactsComponent } from './components/public/contacts/contacts.compone
 import { HomeComponent } from './components/public/home/home.component';
 import { FooterComponent } from './components/public/footer/footer.component';
 
+import { AuthGuard } from './services/can.deactivate.guard'
 import { UsersService } from './services/users.service';
 import { AuthenticationService } from './services/authentication.service';
 
@@ -37,7 +38,7 @@ import { AuthenticationService } from './services/authentication.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [UsersService, AuthenticationService],
+  providers: [UsersService, AuthenticationService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

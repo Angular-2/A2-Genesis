@@ -65,19 +65,20 @@ app
 			return res.status(400).send("You must send the username and the password");
 		}
 		// Search IS NOT WORKING PROPERLY
-		var user = db['users'].find({username: req.body.username});
-		console.log(user);
-		if (!user) {
-			return res.status(401).send("The username or password don't match");
-		}
-		if (!(user.password === req.body.passHash)) {
-			return res.status(401).send("The username or password don't match");
-		}
-
-		res.status(200).send({
-			id_token: createToken(user)
+		db['users'].findOne({ username: req.body.username }, function(err, user) {
+			if (!user) {
+				return res.status(401).send("The username or password doesn't match");
+			}
+			if (!(user.password === req.body.passHash)) {
+				return res.status(401).send("The username or password doesn't match");
+			}
+			
+			res.status(200).send({
+				id_token: createToken(user)
+			});
 		});
 	});
+
 
 const port = 3000;
 app.listen(port);
