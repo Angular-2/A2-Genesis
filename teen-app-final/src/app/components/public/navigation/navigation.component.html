@@ -31,7 +31,7 @@
                 </li>-->
                 <li *ngIf="isLoggedIn()"><a routerLink="/"><span class="glyphicon"></span> My Group</a></li>
                 <li *ngIf="isLoggedIn()"><a routerLink="/"><span class="glyphicon"></span> Jobs</a></li>
-                <li *ngIf="isLoggedIn()"><a routerLink="/"><span class="glyphicon"></span> My Profile</a></li>
+                <li *ngIf="isLoggedIn()"><a routerLink="/my-profile"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
                 <li *ngIf="isLoggedIn()"><a (click)="logout()" routerLink="/home"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 <li *ngIf="!isLoggedIn()"><a routerLink="/login"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
                 <li *ngIf="!isLoggedIn()"><a routerLink="/register"><span class="glyphicon glyphicon-lock"></span> Register</a></li>

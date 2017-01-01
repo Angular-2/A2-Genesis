@@ -9,6 +9,7 @@ import { ParentGuideComponent } from './components/public/parent-guide/parent-gu
 import { TeenJobsComponent } from './components/public/teen-jobs/teen-jobs.component';
 import { HomeComponent } from './components/public/home/home.component';
 import { FooterComponent } from './components/public/footer/footer.component';
+import { MyProfileComponent } from './components/private/my-profile/my-profile.component';
 
 
 @Component({
