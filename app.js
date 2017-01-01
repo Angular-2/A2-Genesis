@@ -54,9 +54,9 @@ app
 		else {
 			db['users'].save(user, function (err, user) {
 				if (err) {
-					res.send(err);
+					res.status(400).send(err);
 				}
-				res.json(user);
+				res.status(200).json(user);
 			})
 		}
 	})
@@ -68,7 +68,7 @@ app
 			if (!user) {
 				return res.status(401).send("The username or password doesn't match");
 			}
-			if (!(user.password === req.body.passHash)) {
+			if (!(user.password === req.body.password)) {
 				return res.status(401).send("The username or password doesn't match");
 			}
 			
