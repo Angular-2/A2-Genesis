@@ -7,15 +7,17 @@ import { AuthenticationService } from './../../../services/authentication.servic
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-  private showHiddenClass: boolean = true;
 
   constructor(private authService: AuthenticationService) { }
 
   ngOnInit() {
   }
 
-  logout() {
-    this.showHiddenClass = false;
+  isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
+  }
+
+  logout(): void {
     this.authService.logout();
   }
 }
