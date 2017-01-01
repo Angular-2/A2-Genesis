@@ -13,6 +13,8 @@ import { FooterComponent } from './components/public/footer/footer.component';
 import { AuthGuard } from'./services/can.deactivate.guard';
 import { MyProfileComponent } from './components/private/my-profile/my-profile.component';
 import { UpdateInfoComponent } from './components/private/update-info/update-info.component';
+import { JobsComponent } from './components/private/jobs/jobs.component';
+import { MyGroupComponent } from './components/private/my-group/my-group.component';
 
 const routes: Routes = [
   {
@@ -62,6 +64,14 @@ const routes: Routes = [
   {
     "path": 'update-info',
     component: UpdateInfoComponent
+  },
+  {
+    "path": 'my-group',
+    component: MyGroupComponent
+  },
+  {
+    "path": 'jobs',
+    component: JobsComponent
   }
 ];
 
@@ -72,4 +82,4 @@ const routes: Routes = [
 
 export class AppRoutingModule { }
 
-export const routedComponents = [ RegisterComponent, LoginComponent, HowToUseComponent, AboutUsComponent, ContactsComponent, ParentGuideComponent, TeenJobsComponent, HomeComponent, FooterComponent, MyProfileComponent, UpdateInfoComponent ];
+export const routedComponents = [ RegisterComponent, LoginComponent, HowToUseComponent, AboutUsComponent, ContactsComponent, ParentGuideComponent, TeenJobsComponent, HomeComponent, FooterComponent, MyProfileComponent, UpdateInfoComponent, MyGroupComponent, JobsComponent ];

@@ -21,6 +21,8 @@ import { UsersService } from './services/users.service';
 import { AuthenticationService } from './services/authentication.service';
 import { MyProfileComponent } from './components/private/my-profile/my-profile.component';
 import { UpdateInfoComponent } from './components/private/update-info/update-info.component';
+import { JobsComponent } from './components/private/jobs/jobs.component';
+import { MyGroupComponent } from './components/private/my-group/my-group.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { UpdateInfoComponent } from './components/private/update-info/update-inf
     HomeComponent,
     FooterComponent,
     MyProfileComponent,
-    UpdateInfoComponent
+    UpdateInfoComponent,
+    JobsComponent,
+    MyGroupComponent
   ],
   imports: [
     BrowserModule,
