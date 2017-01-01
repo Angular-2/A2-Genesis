@@ -14,43 +14,43 @@ import { AuthGuard } from'./services/can.deactivate.guard';
 
 const routes: Routes = [
   {
-    path: '',
+    "path": '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
   {
-    path: 'home',
+    "path": 'home',
     component: HomeComponent,
   },
   {
-    path: 'login',
+    "path": 'login',
     component: LoginComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'register',
+    "path": 'register',
     component: RegisterComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'how-to-use',
+    "path": 'how-to-use',
     component: HowToUseComponent
   },
   {
-    path: 'about-us',
+    "path": 'about-us',
     component: AboutUsComponent
   },
   {
-    path: 'contacts',
+    "path": 'contacts',
     component: ContactsComponent
   },
   {
-    path: 'parent-guide',
+    "path": 'parent-guide',
     component: ParentGuideComponent,
 
   },
   {
-    path: 'teen-jobs',
+    "path": 'teen-jobs',
     component: TeenJobsComponent
   }
 ];

@@ -8,11 +8,8 @@ import 'rxjs/add/operator/map'
 export class AuthenticationService {
     private headers = new Headers({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
     private options = new RequestOptions({ headers: this.headers });
-    public token: string;
 
     constructor(private http: Http, private router: Router) {
-        let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        this.token = currentUser && currentUser.token;
     }
 
     login(username: string, password: string): any {
@@ -23,8 +20,8 @@ export class AuthenticationService {
             .then((response: Response) => {
                 let token = response.json() && response.json().id_token;
                 if (token) {
-                    this.token = token;
-                    localStorage.setItem('currentUser', JSON.stringify({ username: username, token: token }));
+                    localStorage.setItem('currentUser', JSON.stringify({ username }));
+                    localStorage.setItem('currentUser', JSON.stringify({ token }));
                     
                     alert("You have logged in successfully");
                     this.router.navigateByUrl('/home');
@@ -39,13 +36,12 @@ export class AuthenticationService {
     }
 
     logout(): void {
-        this.token = null;
         alert("You have successfully logged out");
-        localStorage.removeItem('currentUser');
+        localStorage.clear();
     }
 
     isLoggedIn(): Boolean {
-        if(localStorage.hasOwnProperty('currentUser')) {
+        if(localStorage.length > 0) {
             return true;
         }
         else{
