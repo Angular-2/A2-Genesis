@@ -11,7 +11,8 @@ import { TeenJobsComponent } from './components/public/teen-jobs/teen-jobs.compo
 import { HomeComponent } from './components/public/home/home.component';
 import { FooterComponent } from './components/public/footer/footer.component';
 import { AuthGuard } from'./services/can.deactivate.guard';
-import { MyProfileComponent } from './components/private/my-profile/my-profile.component'
+import { MyProfileComponent } from './components/private/my-profile/my-profile.component';
+import { UpdateInfoComponent } from './components/private/update-info/update-info.component';
 
 const routes: Routes = [
   {
@@ -57,6 +58,10 @@ const routes: Routes = [
   {
     "path": 'my-profile',
     component: MyProfileComponent
+  },
+  {
+    "path": 'update-info',
+    component: UpdateInfoComponent
   }
 ];
 
@@ -67,4 +72,4 @@ const routes: Routes = [
 
 export class AppRoutingModule { }
 
-export const routedComponents = [ RegisterComponent, LoginComponent, HowToUseComponent, AboutUsComponent, ContactsComponent, ParentGuideComponent, TeenJobsComponent, HomeComponent, FooterComponent, MyProfileComponent ];
+export const routedComponents = [ RegisterComponent, LoginComponent, HowToUseComponent, AboutUsComponent, ContactsComponent, ParentGuideComponent, TeenJobsComponent, HomeComponent, FooterComponent, MyProfileComponent, UpdateInfoComponent ];
