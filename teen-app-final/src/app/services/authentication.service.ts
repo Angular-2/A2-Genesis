@@ -40,7 +40,7 @@ export class AuthenticationService {
         localStorage.clear();
     }
 
-    isLoggedIn(): Boolean {
+    isLoggedIn(): boolean {
         if(localStorage.length > 0) {
             return true;
         }

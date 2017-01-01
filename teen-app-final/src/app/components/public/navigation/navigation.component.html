@@ -29,9 +29,9 @@
                         <li><a routerLink="#">TASKS</a></li>
                     </ul>
                 </li>
-                <li [ngClass]="{ 'hidden': !showHiddenClass }"><a (click)="logout()" routerLink="/home"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-                <li [ngClass]="{ 'hidden': showHiddenClass }"><a routerLink="/login"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
-                <li [ngClass]="{ 'hidden': showHiddenClass }"><a routerLink="/register"><span class="glyphicon glyphicon-lock"></span> Register</a></li>
+                <li *ngIf="isLoggedIn()"><a (click)="logout()" routerLink="/home"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                <li *ngIf="!isLoggedIn()"><a routerLink="/login"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+                <li *ngIf="!isLoggedIn()"><a routerLink="/register"><span class="glyphicon glyphicon-lock"></span> Register</a></li>
             </ul>
         </div>
     </div>
