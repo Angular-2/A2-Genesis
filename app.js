@@ -39,37 +39,53 @@ app
 	.get('/users', function (req, res, next) {
 		db['users'].find(function (err, users) {
 			if (err) {
-				res.send(err);
+				return res.json({ "error": "DB Error"});
 			}
-			res.json(users);
+			return res.status(200).json(users);
 		})
 	})
 	.post('/users', function (req, res, next) {
 		let user = req.body;
 
 		if (!user.username || !user.password) {
-			res.status(400);
-			res.json({ "error": "Bad data!" });
+			return res.status(400).json({ "error": "Please Enter username or password" });
 		}
 		else {
-			db['users'].save(user, function (err, user) {
-				if (err) {
-					res.status(400).send(err);
+			db['users'].findOne({ username: req.body.username }, function(err, userInDb) {
+				if (userInDb) {
+					return res.status(401).json({"error": "Please choose another username. This username is already in use!"});
 				}
-				res.status(200).json(user);
+			
+				db['users'].save(user, function (err, user) {
+					if (err) {
+						return res.status(400).json({"error": "DB error"});
+					}
+					return res.status(200).json(user);
+				})
 			})
 		}
 	})
+	.get('/users/:username', function(req, res, next) {
+		let username = req.params.username;
+
+		db['users'].findOne({ username: username }, function(err, user) {
+			if (!user) {
+				return res.status(401).json({"error": "DB: User not found"});
+			}
+			
+			res.status(200).json(user);
+		});
+	})
 	.post('/authenticate', function(req, res, next)  {
 		if (!req.body.username || !req.body.password) {
-			return res.status(400).send("You must send the username and the password");
+			return res.status(400).json({ "error": "You must send the username and the password" });
 		}
 		db['users'].findOne({ username: req.body.username }, function(err, user) {
 			if (!user) {
-				return res.status(401).send("The username or password doesn't match");
+				return res.status(401).json({ "error": "The username or password doesn't match" });
 			}
 			if (!(user.password === req.body.password)) {
-				return res.status(401).send("The username or password doesn't match");
+				return res.status(401).json({ "error": "The username or password doesn't match" });
 			}
 			
 			res.status(200).send({
@@ -80,7 +96,7 @@ app
 	.get('/jobs', function(req, res, next) {
 		db['jobs'].find({}, function(err, jobs) {
 			if (err) {
-				return res.status(400).send('Error in DB');
+				return res.status(400).josn({ "error": "Error in DB" });
 			}
 
 			return res.status(200).json(jobs);
@@ -91,7 +107,7 @@ app
 
 		db['jobs'].save(job, function(err, user) {
 			if (err) {
-				return res.status(400).send('Error in DB');
+				return res.status(400).json({ "error": "Error in DB" });
 			}
 
 			return res.status(200).json(user);

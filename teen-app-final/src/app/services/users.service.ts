@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
+import { User } from './../models/user';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -13,8 +14,14 @@ export class UsersService {
 
   constructor(private http: Http, private router: Router) { }
 
-  getUsers(): Observable<any> {
-    return this.http.get('/users').map(res => (res.json()));
+  getUsers(): any {
+    return this.http
+      .get('http://localhost:3000/users')
+      .toPromise()
+      .then(response => {
+        response.json().data 
+      })
+      .catch(er => alert(JSON.parse(er._body).error));
 }
 
   addUser(user: any): any{
@@ -27,6 +34,16 @@ export class UsersService {
         alert("You have registered successfully");
         response.json().data 
       })
-      .catch((er) => console.log(er));
+      .catch(er => alert(JSON.parse(er._body).error));
+  }
+
+  getUserByUsername(username: string): any {
+    return this.http
+      .get('http://localhost:3000/users' + 'username')
+      .toPromise()
+      .then(response => {
+        response.json().data 
+      })
+      .catch(er => alert(JSON.parse(er._body).error));
   }
 }
