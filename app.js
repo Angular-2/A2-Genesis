@@ -39,24 +39,29 @@ app
 	.get('/users', function (req, res, next) {
 		db['users'].find(function (err, users) {
 			if (err) {
-				res.send(err);
+				return res.send(err);
 			}
-			res.json(users);
+			return res.json(users);
 		})
 	})
 	.post('/users', function (req, res, next) {
 		let user = req.body;
 
 		if (!user.username || !user.password) {
-			res.status(400);
-			res.json({ "error": "Bad data!" });
+			return res.status(400).json({ "error": "Please Enter username or password" });
 		}
 		else {
-			db['users'].save(user, function (err, user) {
-				if (err) {
-					res.status(400).send(err);
+			db['users'].findOne({ username: req.body.username }, function(err, userInDb) {
+				if (userInDb) {
+					return res.status(401).json({"error": "Please choose another username. This username is already in use!"});
 				}
-				res.status(200).json(user);
+			
+				db['users'].save(user, function (err, user) {
+					if (err) {
+						return res.status(400).send(err);
+					}
+					return res.status(200).json(user);
+				})
 			})
 		}
 	})

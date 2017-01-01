@@ -27,6 +27,6 @@ export class UsersService {
         alert("You have registered successfully");
         response.json().data 
       })
-      .catch((er) => console.log(er));
+      .catch((er) => alert(JSON.parse(er._body).error));
   }
 }
