@@ -12,7 +12,7 @@ export class MyProfileComponent implements OnInit {
   private user: User;
 
   constructor(private usersService: UsersService) {
-    this.user = new User('', '', '', '', '');
+    this.user = new User('', '', '', '', '', '');
     
     let username = localStorage['currentUser'];
 

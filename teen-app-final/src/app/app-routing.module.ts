@@ -59,9 +59,6 @@ const routes: Routes = [
   },
   {
     "path": 'my-profile',
-<<<<<<< HEAD
-    component: MyProfileComponent,
-=======
     component: MyProfileComponent
   },
   {
@@ -75,7 +72,6 @@ const routes: Routes = [
   {
     "path": 'jobs',
     component: JobsComponent
->>>>>>> origin/master
   }
 ];
 
