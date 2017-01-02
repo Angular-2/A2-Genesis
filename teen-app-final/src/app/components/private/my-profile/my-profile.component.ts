@@ -19,7 +19,7 @@ export class MyProfileComponent implements OnInit {
     this.usersService.getUserByUsername(username)
       .then(response => {
         let dbUser = response.json();
-        console.log(this.user)
+        
         this.user.email = dbUser.email;
         this.user.firstName = dbUser.firstName;
         this.user.lastName = dbUser.lastName; 
