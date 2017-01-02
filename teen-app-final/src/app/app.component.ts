@@ -15,6 +15,7 @@ import { JobsComponent } from './components/private/jobs/jobs.component';
 import { MyGroupComponent } from './components/private/my-group/my-group.component';
 import { SingleJobComponent } from './components/private/single-job/single-job.component';
 import { AddJobComponent } from './components/private/add-job/add-job.component';
+import { DonateComponent } from './components/public/donate/donate.component';
 
 @Component({
   selector: `app-root`,
