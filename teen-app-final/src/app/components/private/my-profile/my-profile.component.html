@@ -11,9 +11,9 @@
             <h3 class="page-header">Account Overview</h3>
         </div>
         <div class="col-lg-4 col-sm-6 text-center">
-            <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-            <h3><strong>USER NAME</strong>
-                <br><small>Parent/Child</small><br> Full Name
+            <img class="img-circle img-responsive img-center" src="{{this.user.profilePictureUrl}}" alt="">
+            <h3><strong>{{this.user.username}}</strong>
+                <br><small>Parent/Child</small><br>{{this.user.firstName}} {{this.user.lastName}}
             </h3>
         </div>
         <div class="col-xs-12 col-md-8 text-left">
@@ -26,8 +26,8 @@
             <p><strong>Name: </strong> {{this.user.firstName}} {{this.user.lastName}}</p>
             <p><strong>Email: </strong> {{this.user.email}}</p>
             <p><strong>Nickname: </strong> {{this.user.username}}</p>
-            <p><strong>Created At: </strong> DD:MM:SS</p>
-            <p><strong>Updated At: </strong> DD:MM:SS</p>
+            <p><strong>Created At: </strong> {{this.user.createdAt}}</p>
+            <p><strong>Updated At: </strong> {{this.user.lastUpdated}}</p>
         </div>
         <div class="col-lg-4 col-sm-6 text-left">
             <h4 class="link"><strong>OPTIONS</strong></h4>
