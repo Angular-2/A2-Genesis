@@ -6,6 +6,7 @@ export class Job {
         dateCreated: Date;
         author: string;
         pictureUrl: string;
+        id: number;
 
         constructor(title: string, workHours: number, salary: number, description: string, author: string, pictureUrl: string) {
                 this.title = title;

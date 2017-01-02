@@ -7,6 +7,7 @@ const collections = ['users', 'jobs'];
 
 const db = mongojs(connectionString, collections);
 
+var ObjectId = require('mongodb').ObjectId; 
 // EXPRESS config
 const express = require('express'),
 	path = require('path'),
@@ -68,6 +69,7 @@ app
 	.get('/users/:username', function(req, res, next) {
 		let username = req.params.username;
 		username = JSON.parse(username).username;
+
 		db['users'].findOne({ username: username }, function(err, user) {
 			if (!user) {
 				return res.status(401).json({"error": "DB: User not found"});
@@ -103,7 +105,6 @@ app
 	})
 	.post('/jobs', function(req, res, next) {
 		let job = req.body;
-		console.log(job);
 		db['jobs'].save(job, function(err, user) {
 			if (err) {
 				return res.status(400).json({ "error": "Error in DB" });
@@ -111,7 +112,18 @@ app
 
 			return res.status(200).json(user);
 		});
-	});
+	})
+	.get('/jobs/:id', function(req, res, next) {
+		let id = req.params.id;
+
+		db['jobs'].findOne({ _id: new ObjectId(id) }, function(err, job) {
+			if (err) {
+				return res.status(400).josn({ "error": "Error in DB" });
+			}
+
+			return res.status(200).json(job);
+		});
+	})
 
 const port = 3000;
 app.listen(port);

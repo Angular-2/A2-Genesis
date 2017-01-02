@@ -78,7 +78,7 @@ const routes: Routes = [
     component: JobsComponent
   },
   {
-    "path": 'single-job',
+    "path": 'jobs/:id',
     component: SingleJobComponent
   },
   {

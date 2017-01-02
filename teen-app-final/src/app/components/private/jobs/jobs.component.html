@@ -22,32 +22,16 @@
             </span>
         </div>
     </div>
-    <div class="container"><br></div>
     <div class="row">
-        <div class="col-sm-3">
-            <a routerLink="/single-job">Some text..
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive img-thumbnail" style="width:100%" alt="Image">
-            </a>
-        </div>
-        <div class="col-sm-3">
-            <a routerLink="/single-job">Some text..
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive img-thumbnail" style="width:100%" alt="Image">
-            </a>
-        </div>
-        <div class="col-sm-3">
-            <a routerLink="/single-job">Some text..
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive img-thumbnail" style="width:100%" alt="Image">
-            </a>
-        </div>
-        <div class="col-sm-3">
-            <a routerLink="/single-job">Some text..
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive img-thumbnail" style="width:100%" alt="Image">
+        <div *ngFor="let job of this.jobs;" class="col-sm-3">
+            <a routerLink="/jobs/{{job.id}}"> {{job.title}}
+                <img src="{{job.pictureUrl}}" class="img-responsive img-thumbnail" style="width:100%" alt="Image">
             </a>
         </div>
     </div>
 </div><br>
 
-<div class="container-fluid bg-3 text-center">
+<!--<div class="container-fluid bg-3 text-center">
     <div class="row">
         <div class="col-sm-3">
             <a routerLink="/single-job">Some text..
@@ -70,7 +54,7 @@
             </a>
         </div>
     </div>
-</div><br>
+</div><br>-->
 <div class="row">
     <div class="col-lg-12 text-center">
         <p><a class="btn btn-lg btn-primary" routerLink="/add-job" role="button">ADD NEW JOB</a></p>

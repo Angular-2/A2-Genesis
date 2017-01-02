@@ -2,17 +2,17 @@
     <h2>JOB TITLE</h2>
     <hr>
     <div class="col-md-8 col-md-offset-2">
-        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive img-thumbnail" style="width:100%" alt="Image">
+        <img src="{{job.pictureUrl}}" class="img-responsive img-thumbnail" style="width:100%" alt="Image">
     </div>
 
     <div class="row marketing">
         <div class="col-md-8 col-md-offset-2">
             <h4 class="important"><strong>JOB DETAILS</strong></h4>
-            <p><strong>Description: </strong> Description</p>
-            <p><strong>Author: </strong> Author</p>
-            <p><strong>Work Hours: </strong> Work Hours</p>
-            <p><strong>Salary: </strong> salary</p>
-            <p><strong>Date Created: </strong> Date Created</p>
+            <p><strong>Description: </strong> {{job.description}}</p>
+            <p><strong>Author: </strong> {{job.author}}</p>
+            <p><strong>Work Hours: </strong> {{job.workHours}}</p>
+            <p><strong>Salary: </strong> {{job.salary}}</p>
+            <p><strong>Date Created: </strong> {{job.dateCreated}}</p>
         </div>
     </div>
 </div>
