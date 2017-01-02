@@ -18,6 +18,7 @@ import { MyGroupComponent } from './components/private/my-group/my-group.compone
 import { SingleJobComponent } from './components/private/single-job/single-job.component';
 import { AddJobComponent } from './components/private/add-job/add-job.component';
 import { DonateComponent } from './components/public/donate/donate.component';
+import { AddTaskComponent } from './components/private/add-task/add-task.component';
 
 const routes: Routes = [
   {
@@ -87,6 +88,10 @@ const routes: Routes = [
   {
     "path": 'donate',
     component: DonateComponent
+  },
+  {
+    "path": 'add-task',
+    component: AddTaskComponent
   }
 ];
 
@@ -97,4 +102,4 @@ const routes: Routes = [
 
 export class AppRoutingModule { }
 
-export const routedComponents = [ RegisterComponent, LoginComponent, HowToUseComponent, AboutUsComponent, ContactsComponent, ParentGuideComponent, TeenJobsComponent, HomeComponent, FooterComponent, MyProfileComponent, UpdateInfoComponent, MyGroupComponent, JobsComponent, SingleJobComponent, AddJobComponent, DonateComponent ];
+export const routedComponents = [ RegisterComponent, LoginComponent, HowToUseComponent, AboutUsComponent, ContactsComponent, ParentGuideComponent, TeenJobsComponent, HomeComponent, FooterComponent, MyProfileComponent, UpdateInfoComponent, MyGroupComponent, JobsComponent, SingleJobComponent, AddJobComponent, DonateComponent, AddTaskComponent ];

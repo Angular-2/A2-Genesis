@@ -26,6 +26,7 @@ import { MyGroupComponent } from './components/private/my-group/my-group.compone
 import { SingleJobComponent } from './components/private/single-job/single-job.component';
 import { AddJobComponent } from './components/private/add-job/add-job.component';
 import { DonateComponent } from './components/public/donate/donate.component';
+import { AddTaskComponent } from './components/private/add-task/add-task.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { DonateComponent } from './components/public/donate/donate.component';
     MyGroupComponent,
     SingleJobComponent,
     AddJobComponent,
-    DonateComponent
+    DonateComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
