@@ -10,7 +10,9 @@ import { TeenJobsComponent } from './components/public/teen-jobs/teen-jobs.compo
 import { HomeComponent } from './components/public/home/home.component';
 import { FooterComponent } from './components/public/footer/footer.component';
 import { MyProfileComponent } from './components/private/my-profile/my-profile.component';
-
+import { UpdateInfoComponent } from './components/private/update-info/update-info.component';
+import { JobsComponent } from './components/private/jobs/jobs.component';
+import { MyGroupComponent } from './components/private/my-group/my-group.component';
 
 @Component({
   selector: `app-root`,

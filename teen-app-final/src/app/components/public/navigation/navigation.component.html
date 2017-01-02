@@ -29,8 +29,8 @@
                         <li><a routerLink="#">TASKS</a></li>
                     </ul>
                 </li>-->
-                <li *ngIf="isLoggedIn()"><a routerLink="/"><span class="glyphicon glyphicon-globe"></span> MY GROUP</a></li>
-                <li *ngIf="isLoggedIn()"><a routerLink="/"><span class="glyphicon glyphicon-equalizer"></span> JOBS</a></li>
+                <li *ngIf="isLoggedIn()"><a routerLink="/my-group"><span class="glyphicon glyphicon-globe"></span> MY GROUP</a></li>
+                <li *ngIf="isLoggedIn()"><a routerLink="/jobs"><span class="glyphicon glyphicon-equalizer"></span> JOBS</a></li>
                 <li *ngIf="isLoggedIn()"><a routerLink="/my-profile"><span class="glyphicon glyphicon-user"></span> MY PROFILE</a></li>
                 <li *ngIf="isLoggedIn()"><a (click)="logout()" routerLink="/home"><span class="glyphicon glyphicon-log-out"></span> LOGOUT</a></li>
                 <li *ngIf="!isLoggedIn()"><a routerLink="/login"><span class="glyphicon glyphicon-log-in" ></span> LOGIN</a></li>
