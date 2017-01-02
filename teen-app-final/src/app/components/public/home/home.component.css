@@ -6,3 +6,8 @@
 .well {
     height: 100
 }
+
+.banner {
+    max-width: 100%;
+    height: auto
+}
