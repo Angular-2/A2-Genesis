@@ -13,10 +13,10 @@ export class LoginComponent implements OnInit {
   constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
-    this.model = new User('', '', '', '', '');
+    this.model = new User('', '', '', '', '', '');
   }
 
   login() {
-    this.authenticationService.login(this.model.username, this.model.passHash);
+    this.authenticationService.login(this.model.username, this.model.password);
   }
 }
