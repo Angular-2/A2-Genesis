@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { JobsService } from './../../../services/jobs.service';
+import { Job } from './../../../models/job';
+
 
 @Component({
   selector: 'app-add-job',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-job.component.css']
 })
 export class AddJobComponent implements OnInit {
+  model: Job;
 
-  constructor() { }
+  constructor(private jobsService: JobsService) { }
 
   ngOnInit() {
+    this.model = new Job('', 0, 0, '', '', '');
+    this.model.author = JSON.parse(localStorage['currentUser']).username;
   }
 
+
+  addJob() {
+    this.jobsService.addJob(this.model);
+  }
 }

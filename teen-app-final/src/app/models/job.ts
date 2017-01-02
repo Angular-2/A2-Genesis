@@ -5,4 +5,16 @@ export class Job {
         description: string;
         dateCreated: Date;
         author: string;
+        pictureUrl: string;
+
+        constructor(title: string, workHours: number, salary: number, description: string, author: string, pictureUrl: string) {
+                this.title = title;
+                this.workHours = workHours;
+                this.salary = salary;
+                this.description = description;
+                this.author = author;
+                this.pictureUrl = pictureUrl;
+
+                this.dateCreated = new Date();
+        }
 }

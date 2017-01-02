@@ -103,7 +103,7 @@ app
 	})
 	.post('/jobs', function(req, res, next) {
 		let job = req.body;
-
+		console.log(job);
 		db['jobs'].save(job, function(err, user) {
 			if (err) {
 				return res.status(400).json({ "error": "Error in DB" });

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response, RequestOptions } from '@angular/http';
+import { Job } from './../models/job';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map'
 
@@ -8,8 +10,20 @@ export class JobsService {
     private headers = new Headers({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
     private options = new RequestOptions({ headers: this.headers });
 
-    constructor(private http: Http) {
+    constructor(private http: Http, private router: Router) {
     }
+
+    addJob(job: Job): any{
+        return this.http
+        .post('http://localhost:3000/jobs', JSON.stringify(job), this.options)
+        .toPromise()
+        .then(response =>{
+            this.router.navigateByUrl('/jobs');
+            alert("You have created job successfully.");
+            response.json().data 
+        })
+        .catch(er => alert(JSON.parse(er._body).error));
+  }
 
     getMostRecent(): Promise<any> {
         return this.http

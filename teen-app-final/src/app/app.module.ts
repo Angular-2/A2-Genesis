@@ -15,8 +15,8 @@ import { ContactsComponent } from './components/public/contacts/contacts.compone
 import { HomeComponent } from './components/public/home/home.component';
 import { FooterComponent } from './components/public/footer/footer.component';
 
-
-import { AuthGuard } from './services/can.deactivate.guard'
+import { JobsService } from './services/jobs.service';
+import { AuthGuard } from './services/can.deactivate.guard';
 import { UsersService } from './services/users.service';
 import { AuthenticationService } from './services/authentication.service';
 import { MyProfileComponent } from './components/private/my-profile/my-profile.component';
@@ -55,7 +55,7 @@ import { AddTaskComponent } from './components/private/add-task/add-task.compone
     HttpModule,
     AppRoutingModule
   ],
-  providers: [UsersService, AuthenticationService, AuthGuard],
+  providers: [UsersService, AuthenticationService, AuthGuard, JobsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
