@@ -25,6 +25,7 @@ export class MyProfileComponent implements OnInit {
         this.user.lastName = dbUser.lastName; 
         this.user.password = dbUser.password;
         this.user.username = dbUser.username;
+        this.user.profilePictureUrl = dbUser.profilePictureUrl;
       });
   }
 
