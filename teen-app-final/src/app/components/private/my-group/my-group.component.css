@@ -34,3 +34,8 @@ img {
 .container {
     margin-top: 50px
 }
+
+img {
+    max-width: 200px;
+    height: auto
+}
