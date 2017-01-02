@@ -25,3 +25,8 @@ img {
     border: 2px solid darkslategrey;
     padding: 10px
 }
+
+.right {
+    float: right;
+    margin-top: 20px
+}
