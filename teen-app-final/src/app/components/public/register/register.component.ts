@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
   constructor(private userService: UsersService) { }
 
   ngOnInit() {
-    this.model = new User('', '', '', '', '');
+    this.model = new User('', '', '', '', '', '');
   }
 
   add() {

@@ -7,6 +7,7 @@ import { AuthenticationService } from './../../../services/authentication.servic
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
+  private currentUser: string;
 
   constructor(private authService: AuthenticationService) { }
 

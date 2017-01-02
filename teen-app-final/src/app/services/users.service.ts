@@ -39,11 +39,8 @@ export class UsersService {
 
   getUserByUsername(username: string): any {
     return this.http
-      .get('http://localhost:3000/users' + 'username')
+      .get('http://localhost:3000/users/' + username)
       .toPromise()
-      .then(response => {
-        response.json().data 
-      })
       .catch(er => alert(JSON.parse(er._body).error));
   }
 }

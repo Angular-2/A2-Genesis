@@ -21,7 +21,7 @@ export class AuthenticationService {
                 let token = response.json() && response.json().id_token;
                 if (token) {
                     localStorage.setItem('currentUser', JSON.stringify({ username }));
-                    localStorage.setItem('currentUser', JSON.stringify({ token }));
+                    localStorage.setItem('token', JSON.stringify({ token }));
                     
                     alert("You have logged in successfully");
                     this.router.navigateByUrl('/home');

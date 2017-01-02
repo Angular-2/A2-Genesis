@@ -67,13 +67,12 @@ app
 	})
 	.get('/users/:username', function(req, res, next) {
 		let username = req.params.username;
-
+		username = JSON.parse(username).username;
 		db['users'].findOne({ username: username }, function(err, user) {
 			if (!user) {
 				return res.status(401).json({"error": "DB: User not found"});
 			}
-			
-			res.status(200).json(user);
+			return res.status(200).json(user);
 		});
 	})
 	.post('/authenticate', function(req, res, next)  {
