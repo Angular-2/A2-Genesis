@@ -17,6 +17,10 @@
     padding: 10px
 }
 
+img {
+    margin-bottom: 20px;
+}
+
 .important-box {
     border: 2px solid darkslategrey
 }
