@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>JOB TITLE</h2>
+    <h2>{{job.title | uppercase}}</h2>
     <hr>
     <div class="col-md-8 col-md-offset-2">
         <img src="{{job.pictureUrl}}" class="img-responsive img-thumbnail" style="width:100%" alt="Image">
@@ -11,8 +11,8 @@
             <p><strong>Description: </strong> {{job.description}}</p>
             <p><strong>Author: </strong> {{job.author}}</p>
             <p><strong>Work Hours: </strong> {{job.workHours}}</p>
-            <p><strong>Salary: </strong> {{job.salary}}</p>
-            <p><strong>Date Created: </strong> {{job.dateCreated}}</p>
+            <p><strong>Salary: </strong> {{job.salary | currency:'EUR'}}</p>
+            <p><strong>Date Created: </strong> {{job.dateCreated | date:"MM/dd/yy"}}</p>
         </div>
     </div>
 </div>
