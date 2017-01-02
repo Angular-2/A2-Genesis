@@ -20,3 +20,7 @@ img {
 .important {
     border-radius: unset;
 }
+
+.container {
+    margin-top: 50px
+}

@@ -3,3 +3,7 @@
     background-color: transparent;
     text-align: center;
 }
+
+.container-fluid {
+    margin-top: 50px
+}
