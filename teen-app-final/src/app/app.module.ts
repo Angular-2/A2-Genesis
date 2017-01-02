@@ -27,6 +27,7 @@ import { SingleJobComponent } from './components/private/single-job/single-job.c
 import { AddJobComponent } from './components/private/add-job/add-job.component';
 import { DonateComponent } from './components/public/donate/donate.component';
 import { AddTaskComponent } from './components/private/add-task/add-task.component';
+import { SortPipe } from './pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { AddTaskComponent } from './components/private/add-task/add-task.compone
     SingleJobComponent,
     AddJobComponent,
     DonateComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,
