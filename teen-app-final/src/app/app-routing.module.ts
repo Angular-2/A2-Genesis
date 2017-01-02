@@ -15,6 +15,8 @@ import { MyProfileComponent } from './components/private/my-profile/my-profile.c
 import { UpdateInfoComponent } from './components/private/update-info/update-info.component';
 import { JobsComponent } from './components/private/jobs/jobs.component';
 import { MyGroupComponent } from './components/private/my-group/my-group.component';
+import { SingleJobComponent } from './components/private/single-job/single-job.component';
+import { AddJobComponent } from './components/private/add-job/add-job.component';
 
 const routes: Routes = [
   {
@@ -72,6 +74,14 @@ const routes: Routes = [
   {
     "path": 'jobs',
     component: JobsComponent
+  },
+  {
+    "path": 'single-job',
+    component: SingleJobComponent
+  },
+  {
+    "path": 'add-job',
+    component: AddJobComponent
   }
 ];
 
@@ -82,4 +92,4 @@ const routes: Routes = [
 
 export class AppRoutingModule { }
 
-export const routedComponents = [ RegisterComponent, LoginComponent, HowToUseComponent, AboutUsComponent, ContactsComponent, ParentGuideComponent, TeenJobsComponent, HomeComponent, FooterComponent, MyProfileComponent, UpdateInfoComponent, MyGroupComponent, JobsComponent ];
+export const routedComponents = [ RegisterComponent, LoginComponent, HowToUseComponent, AboutUsComponent, ContactsComponent, ParentGuideComponent, TeenJobsComponent, HomeComponent, FooterComponent, MyProfileComponent, UpdateInfoComponent, MyGroupComponent, JobsComponent, SingleJobComponent, AddJobComponent ];

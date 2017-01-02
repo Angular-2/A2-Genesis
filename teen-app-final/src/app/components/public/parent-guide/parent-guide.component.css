@@ -1,11 +1,11 @@
-.important {
-    color: white;
-    background-color: orange;
-    padding: 10px
+.form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
 }
 
-.important-box {
-    border: 2px solid darkslategrey
+.container {
+    margin-top: 50px
 }
 
 .helpguide {
