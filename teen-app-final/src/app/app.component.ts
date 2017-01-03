@@ -24,4 +24,8 @@ import { AddTaskComponent } from './components/private/add-task/add-task.compone
   styleUrls: [`./app.component.css`]
 })
 export class AppComponent {
+
+  ngOnInit() {
+    console.log("ASDSD");  
+  }
 }
