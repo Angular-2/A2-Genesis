@@ -28,4 +28,16 @@ export class JobsComponent implements OnInit {
   getAllJobs(): any {
     return this.jobsService.getAllJobs(); 
   }
+
+  compareJobs(leftJob, rightJob) {
+    if (leftJob.title < rightJob.title)
+      return -1;
+    if (leftJob.title > rightJob.title)
+      return 1;
+    return 0;
+  }
+
+  sortJobs() {
+    this.jobs.sort(this.compareJobs);
+  }
 }

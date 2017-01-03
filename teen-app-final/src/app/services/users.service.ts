@@ -43,4 +43,11 @@ export class UsersService {
       .toPromise()
       .catch(er => alert(JSON.parse(er._body).error));
   }
+
+  updateUser(user: User) :any {
+    return this.http
+      .post('http://localhost:3000/users/update', JSON.stringify(user), this.options)
+      .toPromise()
+      .catch(er => alert(JSON.parse(er._body).error));
+  }
 }
