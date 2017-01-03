@@ -2,7 +2,7 @@
 
 // MongoDB config
 const mongojs = require('mongojs');
-const connectionString = 'mongodb://localhost/teenAppDatabase';
+const connectionString = 'mongodb://Admin:secretPassword@ds151048.mlab.com:51048/teen_database';
 const collections = ['users', 'jobs', 'groups'];
 
 const db = mongojs(connectionString, collections);
