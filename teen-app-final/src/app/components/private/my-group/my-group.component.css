@@ -39,3 +39,16 @@ img {
     max-width: 200px;
     height: auto
 }
+
+.submit {
+    margin-left: -58px;
+    margin-top: 5px;
+}
+
+#childName {
+    margin-left: -15px;
+}
+
+#Avatar {
+    margin-left: -15px;
+}
