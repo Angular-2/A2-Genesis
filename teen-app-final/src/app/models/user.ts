@@ -7,7 +7,7 @@ export class User {
         profilePictureUrl: string;
         createdAt: Date;
         lastUpdated: Date;
-        // role: string;
+        role: string;
 
         constructor(firstName: string, lastName: string, username: string, email: string, password: string, profilePictureUrl: string) {
                 this.firstName = firstName;

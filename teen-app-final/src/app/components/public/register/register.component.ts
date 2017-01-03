@@ -8,6 +8,8 @@ import { User } from './../../../models/user'
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  isParent: boolean;
+  isChild: boolean;
   model: User;
 
   constructor(private userService: UsersService) { }
@@ -17,6 +19,12 @@ export class RegisterComponent implements OnInit {
   }
 
   add() {
+    if (this.isParent) {
+      this.model.role = 'child';
+    }
+    else if (this.isChild) {
+      this.model.role = 'parent';
+    }
     this.userService.addUser(this.model);
   }
 
