@@ -7,6 +7,7 @@ export class User {
         profilePictureUrl: string;
         createdAt: Date;
         lastUpdated: Date;
+        groupName: string;
         role: string;
 
         constructor(firstName: string, lastName: string, username: string, email: string, password: string, profilePictureUrl: string) {
@@ -16,6 +17,7 @@ export class User {
                 this.email = email;
                 this.password = password;
                 this.profilePictureUrl = profilePictureUrl;
+                this.groupName = "My group";
 
                 this.createdAt = new Date();
                 this.lastUpdated = new Date();

@@ -100,6 +100,7 @@ app
 			}
 			
 			res.status(200).send({
+				group: user.groupName,
 				role: user.role,
 				id_token: createToken(user)
 			});
