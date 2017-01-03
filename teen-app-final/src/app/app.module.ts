@@ -28,6 +28,8 @@ import { AddJobComponent } from './components/private/add-job/add-job.component'
 import { DonateComponent } from './components/public/donate/donate.component';
 import { AddTaskComponent } from './components/private/add-task/add-task.component';
 import { SortPipe } from './pipes/sort.pipe';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+import { RemoveSpacesPipe } from './pipes/remove-spaces.pipe';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { SortPipe } from './pipes/sort.pipe';
     AddJobComponent,
     DonateComponent,
     AddTaskComponent,
-    SortPipe
+    SortPipe,
+    CapitalizePipe,
+    RemoveSpacesPipe
   ],
   imports: [
     BrowserModule,

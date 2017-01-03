@@ -9,9 +9,9 @@
         <div class="col-md-8 col-md-offset-2">
             <h4 class="important"><strong>JOB DETAILS</strong></h4>
             <p><strong>Description: </strong> {{job.description}}</p>
-            <p><strong>Author: </strong> {{job.author}}</p>
+            <p><strong>Author: </strong> {{job.author | capitalize}}</p>
             <p><strong>Work Hours: </strong> {{job.workHours}}</p>
-            <p><strong>Salary: </strong> {{job.salary | currency:'EUR'}}</p>
+            <p><strong>Salary: </strong> {{job.salary | currency:'EUR':true}}</p>
             <p><strong>Date Created: </strong> {{job.dateCreated | date:"MM/dd/yy"}}</p>
         </div>
     </div>
