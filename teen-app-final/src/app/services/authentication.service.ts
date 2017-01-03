@@ -15,7 +15,7 @@ export class AuthenticationService {
     login(username: string, password: string): any {
         var user = { username, password };
         return this.http
-            .post('http://localhost:3000/authenticate', JSON.stringify(user), this.options)
+            .post('/api/authenticate', JSON.stringify(user), this.options)
             .toPromise()
             .then((response: Response) => {
                 let token = response.json().id_token;

@@ -12,7 +12,7 @@ export class GroupsService {
 
     create(group: Group) {
         return this.http
-        .post('http://localhost:3000/groups', JSON.stringify(group), this.options)
+        .post('/api/groups', JSON.stringify(group), this.options)
         .toPromise()
         .then(response =>{
             response.json().data 

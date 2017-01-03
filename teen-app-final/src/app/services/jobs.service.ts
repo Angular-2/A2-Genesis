@@ -15,7 +15,7 @@ export class JobsService {
 
     addJob(job: Job): any{
         return this.http
-            .post('http://localhost:3000/jobs', JSON.stringify(job), this.options)
+            .post('/api/jobs', JSON.stringify(job), this.options)
             .toPromise()
             .then(response =>{
                 this.router.navigateByUrl('/jobs');
@@ -25,26 +25,16 @@ export class JobsService {
             .catch(er => alert(JSON.parse(er._body).error));
   }
 
-    // getMostRecent(): Promise<any> {
-    //     return this.http
-    //         .get('http://localhost:3000/jobs', this.options)
-    //         .toPromise()
-    //         .then((response: Response) => {
-    //             let result = response.json();
-    //             // TO DO
-    //         });
-    // }
-
     getAllJobs() {
         return this.http
-            .get('http://localhost:3000/jobs', this.options)
+            .get('/api/jobs', this.options)
             .toPromise()
             .then((response: Response) => response.json());
     }
 
     getJobById(id: string) {
         return this.http
-            .get('http://localhost:3000/jobs/' + id)
+            .get('/api/jobs/' + id)
             .toPromise()
             .then(response => {
                 return response.json();

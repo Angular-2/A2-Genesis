@@ -16,7 +16,7 @@ export class UsersService {
 
   getUsers(): any {
     return this.http
-      .get('http://localhost:3000/users')
+      .get('/api/users')
       .toPromise()
       .then(response => {
         response.json().data 
@@ -25,9 +25,8 @@ export class UsersService {
 }
 
   addUser(user: any): any{
-    //return this.http.post('/users', JSON.stringify(user), this.options);
     return this.http
-      .post('http://localhost:3000/users', JSON.stringify(user), this.options)
+      .post('/api/users', JSON.stringify(user), this.options)
       .toPromise()
       .then(response =>{
         this.router.navigateByUrl('/login');
@@ -39,14 +38,14 @@ export class UsersService {
 
   getUserByUsername(username: string): any {
     return this.http
-      .get('http://localhost:3000/users/' + username)
+      .get('/api/users/' + username)
       .toPromise()
       .catch(er => alert(JSON.parse(er._body).error));
   }
 
   updateUser(user: any) :any {
     return this.http
-      .post('http://localhost:3000/users/update', JSON.stringify(user), this.options)
+      .post('/api/users/update', JSON.stringify(user), this.options)
       .toPromise()
       .catch(er => alert(JSON.parse(er._body).error));
   }
