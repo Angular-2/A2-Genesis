@@ -66,6 +66,17 @@ app
 			})
 		}
 	})
+	.post('/users/update', function(req, res, next) {
+		let user = req.body;
+
+		db['users'].update({ username: user.username }, user, { upsert: true }, function(err, user) {
+			if (!user) {
+				return res.status(401).json({"error": "DB: User not found"});
+			}
+
+			return res.status(200).json(user);
+		});
+	})
 	.get('/users/:username', function(req, res, next) {
 		let username = req.params.username;
 		username = JSON.parse(username).username;
