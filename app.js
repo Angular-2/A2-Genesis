@@ -3,7 +3,7 @@
 // MongoDB config
 const mongojs = require('mongojs');
 const connectionString = 'mongodb://localhost/teenAppDatabase';
-const collections = ['users', 'jobs'];
+const collections = ['users', 'jobs', 'groups'];
 
 const db = mongojs(connectionString, collections);
 
@@ -117,6 +117,7 @@ app
 	})
 	.post('/jobs', function(req, res, next) {
 		let job = req.body;
+
 		db['jobs'].save(job, function(err, user) {
 			if (err) {
 				return res.status(400).json({ "error": "Error in DB" });
@@ -134,6 +135,17 @@ app
 			}
 
 			return res.status(200).json(job);
+		});
+	})
+	.post('/groups', function(req, res, next) {
+		let group = req.params;
+
+		db['groups'].save(group, function(err, group) {
+			if (err) {
+				return res.status(400).json({ "error": "Error in DB" });
+			}
+
+			return res.status(200).json(group);
 		});
 	})
 

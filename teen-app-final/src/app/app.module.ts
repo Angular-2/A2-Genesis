@@ -15,6 +15,7 @@ import { ContactsComponent } from './components/public/contacts/contacts.compone
 import { HomeComponent } from './components/public/home/home.component';
 import { FooterComponent } from './components/public/footer/footer.component';
 
+import { GroupsService } from './services/groups.service';
 import { JobsService } from './services/jobs.service';
 import { AuthGuard } from './services/can.deactivate.guard';
 import { UsersService } from './services/users.service';
@@ -65,7 +66,7 @@ import { HightlightItemDirective } from './directives/hightlight-item.directive'
     HttpModule,
     AppRoutingModule
   ],
-  providers: [UsersService, AuthenticationService, AuthGuard, JobsService],
+  providers: [UsersService, AuthenticationService, AuthGuard, JobsService, GroupsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

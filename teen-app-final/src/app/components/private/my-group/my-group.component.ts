@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Group } from './../../../models/group';
 
 @Component({
   selector: 'app-my-group',
@@ -6,12 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-group.component.css']
 })
 export class MyGroupComponent implements OnInit {
-private showClass: boolean = true;
-private showClass1: boolean = true;
+  private showFirstInput: boolean = true;
+  private showSecondInput: boolean = true;
+  
+  private group: Group
 
-  constructor() { }
+  constructor() {
+    this.group = new Group('My Group');
+  }
 
   ngOnInit() {
   }
 
+  addProfilePicture() {
+      alert('You have added profile picture successfully.');
+      this.showSecondInput = !this.showSecondInput;
+  }
 }

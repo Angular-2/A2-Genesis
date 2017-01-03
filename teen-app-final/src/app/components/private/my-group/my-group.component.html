@@ -29,8 +29,8 @@
             <p><strong>Created At: </strong> DD:MM:SS</p>
             <br>
             <h4 class="link"><strong>OPTIONS</strong></h4>
-            <p><a class="btn btn-lg btn-warning" routerLink="#" role="button" (click)="showClass = !showClass">ADD CHILD</a></p>
-            <label [ngClass]="{ 'hidden': showClass }">
+            <p><a class="btn btn-lg btn-warning" routerLink="#" role="button" (click)="showFirstInput = !showFirstInput">ADD CHILD</a></p>
+            <label [ngClass]="{ 'hidden': showFirstInput }">
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="childName" placeholder="Child Name">
                 </div>
@@ -38,14 +38,16 @@
                     <button type="submit" class="btn btn-primary">SUBMIT</button>
                 </div>
             </label>
-            <p><a class="btn btn-lg btn-info" routerLink="#" role="button" (click)="showClass1 = !showClass1">ADD GROUP AVATAR</a></p>
-            <label [ngClass]="{ 'hidden': showClass1 }">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Avatar" placeholder="Avatar Url">
-                </div>
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary">SUBMIT</button>
-                </div>
+            <p><a class="btn btn-lg btn-info" routerLink="#" role="button" (click)="showSecondInput = !showSecondInput">ADD GROUP AVATAR</a></p>
+            <label [ngClass]="{ 'hidden': showSecondInput }">
+                <form #addChildForm="ngForm" (ngSubmit)="addProfilePicture();">
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="Avatar" placeholder="Avatar Url" name="pictureUrl" [(ngModel)]="group.pictureUrl">
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">SUBMIT</button>
+                    </div>
+                </form>
             </label>
         </div>
         <div class="col-lg-4 col-sm-6 text-left">
