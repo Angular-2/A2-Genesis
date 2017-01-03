@@ -1,45 +1,46 @@
-<div class="container"></div>
-<div class="container-fluid bg-3 text-center">
-    <div class="row">
-        <div class="col-lg-12 center">
-            <h2 class="page-header">JOBS <small>at TEEN@home</small>
-            </h2>
+<div class="container">
+    <div class="container-fluid bg-3 text-center">
+        <div class="row">
+            <div class="col-lg-12 center">
+                <h2 class="page-header">JOBS <small>at TEEN@home</small>
+                </h2>
+            </div>
         </div>
-    </div>
 
-    <div class="col-lg-6">
-        <div class="input-group">
-            <!--<p><a class="btn btn-lg btn-primary" routerLink="№" role="button">SORT JOBS BY TITLE</a></p>-->
-            <button (click)="sortJobs" class="btn btn-lg btn-warning" type="button">SORT JOBS BY TITLE</button>
+        <div class="col-lg-6">
+            <div class="input-group">
+                <!--<p><a class="btn btn-lg btn-primary" routerLink="№" role="button">SORT JOBS BY TITLE</a></p>-->
+                <button (click)="sortJobs" class="btn btn-lg btn-warning" type="button">SORT JOBS BY TITLE</button>
+            </div>
+        </div>
+        <br>
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search" placeholder="Search..." onfocus="this.placeholder = ''" onblur="this.placeholder ='Search...'"></span></button>
+                </span>
+            </div>
+        </div>
+        <br> <br>
+        <div class="col-lg-12 center">
+            <ul>
+                <li>
+                    <div id="picture-container" *ngFor="let job of this.jobs;" class="col-sm-3">
+                        <a routerLink="/jobs/{{job.id}}"> {{job.title | uppercase}}
+                        <img src="{{job.pictureUrl}}" class="img-responsive img-thumbnail" alt="Image">
+                    </a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
     <br>
-    <div class="col-lg-6">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search" placeholder="Search..." onfocus="this.placeholder = ''" onblur="this.placeholder ='Search...'"></span></button>
-            </span>
-        </div>
-    </div>
-    <br> <br>
-    <div class="col-lg-12 center">
-        <ul>
-            <li>
-                <div *ngFor="let job of this.jobs;" class="col-sm-3">
-                    <a routerLink="/jobs/{{job.id}}"> {{job.title | uppercase}} <!--{{job.title | uppercase | sort}}-->
-                        <img src="{{job.pictureUrl}}" class="img-responsive img-thumbnail" style="width:100%" alt="Image">
-                    </a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<br>
 
-<div class="row">
-    <div class="col-lg-12 text-center">
-        <p><a class="btn btn-lg btn-primary" routerLink="/add-job" role="button">ADD NEW JOB</a></p>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <p><a class="btn btn-lg btn-primary" routerLink="/add-job" role="button">ADD NEW JOB</a></p>
+        </div>
     </div>
 </div>
 <br><br>
