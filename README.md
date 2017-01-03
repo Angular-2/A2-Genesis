@@ -17,13 +17,14 @@
 
 ## Usage
 
-1. Install angular-cli - npm install angular-cli
-2. Install packages - npm install
-3. Run express server - node app.js
-4. Open teen-app-final folder - cd teen-app-final
-5. Install packages - npm install
-6. Start the lite server - ng serve
-7. You are ready to use the app just go on port 4200. - Go to: http://localhost:4200/
+1. Run mongodb.
+2. Install angular-cli - npm install angular-cli
+3. Install packages - npm install
+4. Run express server - node app.js
+5. Open teen-app-final folder - cd teen-app-final
+6. Install packages - npm install
+7. Start the lite server - ng serve
+8. You are ready to use the app just go on port 4200. - Go to: http://localhost:4200/
 
 ###TEEN@home
 
