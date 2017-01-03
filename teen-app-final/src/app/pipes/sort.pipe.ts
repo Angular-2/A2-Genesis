@@ -5,8 +5,25 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SortPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    return null;
+  transform(value: any[], sortBy?: string){
+    if (sortBy) {
+            if (sortBy.startsWith('-')) {
+                sortBy = sortBy.substr(1);
+                return value.sort(
+                    (x, y) =>
+                        y[sortBy].toString()
+                            .localeCompare(x[sortBy].toString()));
+            } else {
+                sortBy = sortBy.startsWith('+')
+                    ? sortBy.substr(1)
+                    : sortBy;
+                return value.sort(
+                    (x, y) =>
+                        x[sortBy].toString()
+                            .localeCompare(y[sortBy].toString()));
+            }
+        } else {
+            return value.sort();
+        }
   }
-
 }

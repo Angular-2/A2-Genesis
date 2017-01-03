@@ -27,7 +27,7 @@
         <ul>
             <li>
                 <div *ngFor="let job of this.jobs;" class="col-sm-3">
-                    <a routerLink="/jobs/{{job.id}}"> {{job.title | uppercase}}
+                    <a routerLink="/jobs/{{job.id}}"> {{job.title | uppercase}} <!--{{job.title | uppercase | sort}}-->
                         <img src="{{job.pictureUrl}}" class="img-responsive img-thumbnail" style="width:100%" alt="Image">
                     </a>
                 </div>

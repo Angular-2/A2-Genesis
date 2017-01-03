@@ -30,6 +30,7 @@ import { AddTaskComponent } from './components/private/add-task/add-task.compone
 import { SortPipe } from './pipes/sort.pipe';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { RemoveSpacesPipe } from './pipes/remove-spaces.pipe';
+import { FilterByRolePipe } from './pipes/filter-by-role.pipe';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { RemoveSpacesPipe } from './pipes/remove-spaces.pipe';
     AddTaskComponent,
     SortPipe,
     CapitalizePipe,
-    RemoveSpacesPipe
+    RemoveSpacesPipe,
+    FilterByRolePipe
   ],
   imports: [
     BrowserModule,
