@@ -68,8 +68,7 @@ app
 	})
 	.post('/users/update', function(req, res, next) {
 		let user = req.body;
-
-		db['users'].update({ username: user.username }, user, { upsert: true }, function(err, user) {
+		db['users'].update({ username: user.userToChange }, user, { upsert: true }, function(err, user) {
 			if (!user) {
 				return res.status(401).json({"error": "DB: User not found"});
 			}

@@ -4,6 +4,13 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'sort'
 })
 export class SortPipe implements PipeTransform {
+    compareJobs(leftJob, rightJob) {
+        if (leftJob.title < rightJob.title)
+            return -1;
+        if (leftJob.title > rightJob.title)
+            return 1;
+        return 0;
+    }
 
   transform(value: any[], sortBy?: string){
     if (sortBy) {
@@ -23,7 +30,7 @@ export class SortPipe implements PipeTransform {
                             .localeCompare(y[sortBy].toString()));
             }
         } else {
-            return value.sort();
+            return value.sort(this.compareJobs);
         }
   }
 }

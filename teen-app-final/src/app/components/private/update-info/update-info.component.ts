@@ -8,7 +8,7 @@ import { User } from './../../../models/user';
   styleUrls: ['./update-info.component.css']
 })
 export class UpdateInfoComponent implements OnInit {
-  model: User;
+  model: any;
 
   constructor(private userService: UsersService) { }
 
@@ -17,7 +17,9 @@ export class UpdateInfoComponent implements OnInit {
   }
 
   update() {
-    this.userService.updateUser(this.model);
+    this.model.userToChange = JSON.parse(localStorage['currentUser']).username;
+    this.userService.updateUser(this.model)
+      .then(user => console.log(user));
   }
 
 }
