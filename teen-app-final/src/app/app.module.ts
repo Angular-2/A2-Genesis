@@ -31,6 +31,7 @@ import { SortPipe } from './pipes/sort.pipe';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { RemoveSpacesPipe } from './pipes/remove-spaces.pipe';
 import { FilterByRolePipe } from './pipes/filter-by-role.pipe';
+import { HightlightItemDirective } from './directives/hightlight-item.directive';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { FilterByRolePipe } from './pipes/filter-by-role.pipe';
     SortPipe,
     CapitalizePipe,
     RemoveSpacesPipe,
-    FilterByRolePipe
+    FilterByRolePipe,
+    HightlightItemDirective
   ],
   imports: [
     BrowserModule,

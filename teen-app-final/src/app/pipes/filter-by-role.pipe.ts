@@ -11,5 +11,7 @@ export class FilterByRolePipe implements PipeTransform {
     }
 
     return false;
+    
+    //return users.filter(us => us.role == "parent")
   }
 }
