@@ -29,8 +29,9 @@
             <p><strong>Created At: </strong> DD:MM:SS</p>
             <br>
             <h4 class="link"><strong>OPTIONS</strong></h4>
-            <p><a class="btn btn-lg btn-warning" routerLink="#" role="button">ADD CHILD</a></p>
-            <p><a class="btn btn-lg btn-info" routerLink="#" role="button">ADD GROUP AVATAR</a></p>
+            <p *ngIf="isParent"><a class="btn btn-lg btn-warning" routerLink="#" role="button">ADD CHILD</a></p>
+            <p *ngIf="!isParent"><a class="btn btn-lg btn-info" routerLink="#" role="button">ADD PROOF FOR TASK</a></p>
+            <p *ngIf="isParent"><a class="btn btn-lg btn-info" routerLink="#" role="button">ADD GROUP AVATAR</a></p>
         </div>
         <div class="col-lg-4 col-sm-6 text-left">
             <h4 class="link"><strong>TODO LIST</strong></h4>
@@ -72,7 +73,7 @@
               </label>
                 </div>
             </div>
-            <p><a class="btn btn-lg btn-success right" routerLink="/add-task" role="button">ADD NEW TASK</a></p>
+            <p *ngIf="isParent"><a class="btn btn-lg btn-success right" routerLink="/add-task" role="button">ADD NEW TASK</a></p>
         </div>
         <br><br>
         <!--<div class="row">

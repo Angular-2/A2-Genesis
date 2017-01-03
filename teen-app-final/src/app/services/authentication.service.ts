@@ -18,11 +18,14 @@ export class AuthenticationService {
             .post('http://localhost:3000/authenticate', JSON.stringify(user), this.options)
             .toPromise()
             .then((response: Response) => {
-                let token = response.json() && response.json().id_token;
+                console.log(response.json())
+                let token = response.json().id_token;
+                let role = response.json().role;
                 if (token) {
                     localStorage.setItem('currentUser', JSON.stringify({ username }));
                     localStorage.setItem('token', JSON.stringify({ token }));
-                    
+                    localStorage.setItem('role', role);
+
                     alert("You have logged in successfully");
                     this.router.navigateByUrl('/home');
 
