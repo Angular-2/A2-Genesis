@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response, RequestOptions } from '@angular/http';
-import { Router } from '@angular/router'
-import { Observable } from 'rxjs';
-import 'rxjs/add/operator/map'
+import { Router } from '@angular/router';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AuthenticationService {

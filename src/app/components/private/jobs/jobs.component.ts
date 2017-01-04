@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Job } from './../../../models/job';
 import { JobsService } from './../../../services/jobs.service'; 
 
@@ -29,7 +30,7 @@ export class JobsComponent implements OnInit {
     return this.jobsService.getAllJobs(); 
   }
 
-  compareJobs(leftJob, rightJob) {
+  compareJobs(leftJob, rightJob): number {
     if (leftJob.title < rightJob.title)
       return -1;
     if (leftJob.title > rightJob.title)
@@ -37,7 +38,7 @@ export class JobsComponent implements OnInit {
     return 0;
   }
 
-  sortJobs() {
+  sortJobs(): void {
     this.jobs.sort(this.compareJobs);
   }
 }

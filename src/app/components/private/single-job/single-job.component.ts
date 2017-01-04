@@ -24,7 +24,7 @@ export class SingleJobComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  setCurrentJob(job: any) {
+  setCurrentJob(job: any): void {
     this.job.title = job.title;
     this.job.workHours = job.workHours;
     this.job.salary = job.salary;

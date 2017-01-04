@@ -14,12 +14,6 @@ import { ParentGuideComponent } from './components/public/parent-guide/parent-gu
 import { ContactsComponent } from './components/public/contacts/contacts.component';
 import { HomeComponent } from './components/public/home/home.component';
 import { FooterComponent } from './components/public/footer/footer.component';
-
-import { GroupsService } from './services/groups.service';
-import { JobsService } from './services/jobs.service';
-import { AuthGuard } from './services/can.deactivate.guard';
-import { UsersService } from './services/users.service';
-import { AuthenticationService } from './services/authentication.service';
 import { MyProfileComponent } from './components/private/my-profile/my-profile.component';
 import { UpdateInfoComponent } from './components/private/update-info/update-info.component';
 import { JobsComponent } from './components/private/jobs/jobs.component';
@@ -28,10 +22,19 @@ import { SingleJobComponent } from './components/private/single-job/single-job.c
 import { AddJobComponent } from './components/private/add-job/add-job.component';
 import { DonateComponent } from './components/public/donate/donate.component';
 import { AddTaskComponent } from './components/private/add-task/add-task.component';
+
+import { GroupsService } from './services/groups.service';
+import { JobsService } from './services/jobs.service';
+import { LoggedInGuard } from './services/logged.in.guard';
+import { NotLoggedInGuard } from './services/not.logged.in.guard';
+import { UsersService } from './services/users.service';
+import { AuthenticationService } from './services/authentication.service';
+
 import { SortPipe } from './pipes/sort.pipe';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { RemoveSpacesPipe } from './pipes/remove-spaces.pipe';
 import { FilterByRolePipe } from './pipes/filter-by-role.pipe';
+
 import { HightlightItemDirective } from './directives/hightlight-item.directive';
 
 @NgModule({
@@ -66,7 +69,7 @@ import { HightlightItemDirective } from './directives/hightlight-item.directive'
     HttpModule,
     AppRoutingModule
   ],
-  providers: [UsersService, AuthenticationService, AuthGuard, JobsService, GroupsService],
+  providers: [UsersService, AuthenticationService, LoggedInGuard, NotLoggedInGuard, JobsService, GroupsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

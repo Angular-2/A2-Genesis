@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response, RequestOptions } from '@angular/http';
-import { Job } from './../models/job';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/toPromise';
+
+import { Job } from './../models/job';
 
 @Injectable()
 export class JobsService {
@@ -25,14 +25,14 @@ export class JobsService {
             .catch(er => alert(JSON.parse(er._body).error));
   }
 
-    getAllJobs() {
+    getAllJobs(): any {
         return this.http
             .get('/api/jobs', this.options)
             .toPromise()
             .then((response: Response) => response.json());
     }
 
-    getJobById(id: string) {
+    getJobById(id: string): any {
         return this.http
             .get('/api/jobs/' + id)
             .toPromise()

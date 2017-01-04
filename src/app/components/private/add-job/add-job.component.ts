@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { JobsService } from './../../../services/jobs.service';
 import { Job } from './../../../models/job';
 
@@ -13,13 +14,13 @@ export class AddJobComponent implements OnInit {
 
   constructor(private jobsService: JobsService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.model = new Job('', 0, 0, '', '', '');
     this.model.author = JSON.parse(localStorage['currentUser']).username;
   }
 
 
-  addJob() {
+  addJob(): void {
     this.jobsService.addJob(this.model);
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { UsersService } from './../../../services/users.service';
 import { User } from './../../../models/user';
 
@@ -12,11 +13,11 @@ export class UpdateInfoComponent implements OnInit {
 
   constructor(private userService: UsersService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.model = new User('', '', '', '', '', '');
   }
 
-  update() {
+  update(): void {
     this.model.userToChange = JSON.parse(localStorage['currentUser']).username;
     this.userService.updateUser(this.model)
       .then(user => console.log(user));

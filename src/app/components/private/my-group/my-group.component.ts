@@ -11,7 +11,7 @@ private showClass1: boolean = true;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

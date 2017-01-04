@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { AuthenticationService } from './../../../services/authentication.service'
 
 @Component({
@@ -11,7 +12,7 @@ export class NavigationComponent implements OnInit {
 
   constructor(private authService: AuthenticationService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
   isLoggedIn(): boolean {

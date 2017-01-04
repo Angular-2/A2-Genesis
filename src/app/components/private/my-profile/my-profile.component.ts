@@ -29,5 +29,5 @@ export class MyProfileComponent implements OnInit {
       });
   }
 
-  ngOnInit() { }
+  ngOnInit(): void { }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { AuthenticationService } from './../../../services/authentication.service';
 import { User } from './../../../models/user';
 
@@ -12,11 +13,11 @@ export class LoginComponent implements OnInit {
 
   constructor(private authenticationService: AuthenticationService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.model = new User('', '', '', '', '', '');
   }
 
-  login() {
+  login(): void {
     this.authenticationService.login(this.model.username, this.model.password);
   }
 }

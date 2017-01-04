@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { UsersService } from './../../../services/users.service';
 import { GroupsService } from './../../../services/groups.service';
 import { User } from './../../../models/user'
@@ -14,11 +15,11 @@ export class RegisterComponent implements OnInit {
 
   constructor(private userService: UsersService, private groupService: GroupsService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.model = new User('', '', '', '', '', '');
   }
 
-  add() {
+  add(): void {
     this.userService.addUser(this.model);
     this.groupService.create(new Group("My Group"));
   }

@@ -9,8 +9,7 @@ import { ContactsComponent } from './components/public/contacts/contacts.compone
 import { ParentGuideComponent } from './components/public/parent-guide/parent-guide.component';
 import { TeenJobsComponent } from './components/public/teen-jobs/teen-jobs.component';
 import { HomeComponent } from './components/public/home/home.component';
-import { FooterComponent } from './components/public/footer/footer.component';
-import { AuthGuard } from'./services/can.deactivate.guard';
+import { NotLoggedInGuard } from './services/not.logged.in.guard';
 import { MyProfileComponent } from './components/private/my-profile/my-profile.component';
 import { UpdateInfoComponent } from './components/private/update-info/update-info.component';
 import { JobsComponent } from './components/private/jobs/jobs.component';
@@ -19,6 +18,9 @@ import { SingleJobComponent } from './components/private/single-job/single-job.c
 import { AddJobComponent } from './components/private/add-job/add-job.component';
 import { DonateComponent } from './components/public/donate/donate.component';
 import { AddTaskComponent } from './components/private/add-task/add-task.component';
+
+import { FooterComponent } from './components/public/footer/footer.component';
+import { LoggedInGuard } from'./services/logged.in.guard';
 
 const routes: Routes = [
   {
@@ -33,12 +35,12 @@ const routes: Routes = [
   {
     "path": 'login',
     component: LoginComponent,
-    canActivate: [AuthGuard]
+    canActivate: [LoggedInGuard]
   },
   {
     "path": 'register',
     component: RegisterComponent,
-    canActivate: [AuthGuard]
+    canActivate: [LoggedInGuard]
   },
   {
     "path": 'how-to-use',
@@ -55,7 +57,6 @@ const routes: Routes = [
   {
     "path": 'parent-guide',
     component: ParentGuideComponent,
-
   },
   {
     "path": 'teen-jobs',
@@ -63,35 +64,42 @@ const routes: Routes = [
   },
   {
     "path": 'my-profile',
-    component: MyProfileComponent
+    component: MyProfileComponent,
+    canActivate: [NotLoggedInGuard]
   },
   {
     "path": 'update-info',
-    component: UpdateInfoComponent
+    component: UpdateInfoComponent,
+    canActivate: [NotLoggedInGuard]
   },
   {
     "path": 'my-group',
-    component: MyGroupComponent
+    component: MyGroupComponent,
+    canActivate: [NotLoggedInGuard]
   },
   {
     "path": 'jobs',
-    component: JobsComponent
+    component: JobsComponent,
+    canActivate: [NotLoggedInGuard]
   },
   {
     "path": 'jobs/:id',
-    component: SingleJobComponent
+    component: SingleJobComponent,
+    canActivate: [NotLoggedInGuard]
   },
   {
     "path": 'add-job',
-    component: AddJobComponent
+    component: AddJobComponent,
+    canActivate: [NotLoggedInGuard]
   },
   {
     "path": 'donate',
-    component: DonateComponent
+    component: DonateComponent,
   },
   {
     "path": 'add-task',
-    component: AddTaskComponent
+    component: AddTaskComponent,
+    canActivate: [NotLoggedInGuard]
   }
 ];
 

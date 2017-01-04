@@ -9,7 +9,7 @@ export class TeenJobsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

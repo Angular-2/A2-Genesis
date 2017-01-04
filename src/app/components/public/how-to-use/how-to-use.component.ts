@@ -9,7 +9,7 @@ export class HowToUseComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }
