@@ -45,4 +45,4 @@ If you are TEEN who need more money for a week, you can find help in our the app
   * Registered application at Telerik Academy Showcase System - <a href="http://best.telerikacademy.com/projects/427/TEEN-home">Showcase System - TEEN@home</a>
   * Link for the GitHub repository of our App - <a href="https://github.com/Angular-2/A2-Genesis">TEEN@home GitHub repository</a>
   * Link to the presentation - <a href="https://prezi.com/sglpfgkjevqn/angular2-team-quota2-genesisquot/">TEEN@home presentation</a>
-  * Hosted application on a server, link - <a href="https://teen-at-home.herokuapp.com/">TEEN@home hosted on Heroku</a>
+  * Hosted application on a server, link - <a href="https://teenhome.herokuapp.com">TEEN@home hosted on Heroku</a>
